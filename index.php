@@ -1,0 +1,747 @@
+<?php
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+
+require 'vendor/autoload.php';
+
+?>
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="./resources/style.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+	<link rel="stylesheet" href="./resources/owlcarousel/owl.carousel.min.css">
+	<link rel="stylesheet" href="./resources/owlcarousel/owl.theme.default.min.css">
+
+	<title>Dipjoy Sarker | DRM-Coders</title>
+</head>
+<body>
+	<section class="header header-bg-custom fixed-top" id="header">
+		<div class="container">
+			<div class="row py-3">
+				<nav class="navbar navbar-expand-lg navbar-dark w-100" >
+					  <a class="navbar-brand text-light h2" href="#">DIPJOY</a>
+					  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+					    <span class="navbar-toggler-icon"></span>
+					  </button>
+
+					  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+					    <ul class="navbar-nav ml-auto my-auto">
+					      <li class="nav-item mr-4">
+					        <a class="nav-link header-nav-custom text-light position-relative px-0 active" href="#home">Home
+								<div class="position-absolute py-2 overlay"></div>
+					        </a>
+					      </li>
+					      <li class="nav-item mr-4">
+					        <a class="nav-link header-nav-custom text-light position-relative px-0" href="#about">About Me
+					        	<div class="position-absolute py-2 overlay"></div>
+					        </a>
+					      </li>
+					     <li class="nav-item mr-4">
+					        <a class="nav-link header-nav-custom text-light position-relative px-0" href="#project">Projects
+					        	<div class="position-absolute py-2 overlay"></div>
+					        </a>
+					      </li>
+					       <li class="nav-item mr-4">
+					        <a class="nav-link header-nav-custom text-light position-relative px-0" href="#services">Services
+					        	<div class="position-absolute py-2 overlay"></div>
+					        </a>
+					      </li>
+					       <li class="nav-item mr-4">
+					        <a class="nav-link header-nav-custom text-light position-relative px-0" href="#Experience">Experience
+					        	<div class="position-absolute py-2 overlay"></div>
+					        </a>
+					      </li>
+					       <li class="nav-item mr-4">
+					        <a class="nav-link header-nav-custom text-light position-relative px-0" href="#testimonial">Testimonial
+					        	<div class="position-absolute py-2 overlay"></div>
+					        </a>
+					      </li>
+					       <li class="nav-item mr-4">
+					        <a class="nav-link header-nav-custom text-light position-relative px-0" href="#footer">Contact
+					        	<div class="position-absolute py-2 overlay"></div>
+					        </a>
+					      </li>
+					    </ul>
+						<div class="talkBtn">
+							<a href="#" class="btn header-icon-bg-custom rounded-pill text-light py-2 px-4" role="button">LET'S TALK</a>
+						</div>
+					  </div>
+				</nav>
+			</div>
+		</div>
+	</section>
+	<section class="home home-bg-custom py-5" id="home">
+		<div class="container pb-4">
+			<div class="row justify-content-between">
+				<div class="col-lg-6 col-12">
+					<div class="home-info">
+						<p class="text-light text-center py-2" style=" width:180px; letter-spacing: 3px; background-color:#063560;border-radius: 5px;">DIPJOY SARKER</p>
+						<h1 class="text-light font-weight-bold" style="font-size: clamp(1.5rem, 8vw, 4rem); ">HAY! I'M DIPJOY</h1>
+						<h1 class="font-weight-bold" style="font-size: clamp(1.5rem, 8vw, 4rem); color:#0788FF;">I'M DEVELOPER</h1>
+
+						<p class="text-light mt-5" style="font-size: 23px;">As a passionate and detail-oriented web developer, I specialize in building responsive and user-friendly websites. With experience in HTML, CSS, JavaScript, PHP and popular frameworks like Laravel and Django, I bring projects to life with a strong focus on both functionality and design.</p>
+					</div>
+					<div class="row mt-4">
+						<div class="col-md-5 col-sm-7 col-12">
+							 <div class="talkBtn d-sm-block d-flex justify-content-around">
+							 	<a href="#" class="btn header-icon-bg-custom rounded-pill text-light py-3 px-5" role="button">GET IN TOUCH</a>
+							 </div>
+						</div>
+						<div class="col d-md-block d-sm-none"></div>
+						<div class="col-md-4 col-sm-5 col-12 px-0 d-flex justify-content-around mt-sm-0 mt-3">
+							<div class="home-icons text-center rounded-circle" style="background-color: #1877F2;">
+								<a href="#"><i class="bi bi-facebook text-light"></i></a>
+							</div>
+							<div class="home-icons text-center rounded-circle" style="background-color: #F26798;">
+								<a href="#"><i class="bi bi-globe2 text-light"></i></a>
+							</div>
+							<div class="home-icons text-center rounded-circle" style="background-color: #1275B1;">
+								<a href="#"><i class="bi bi-linkedin text-light"></i></a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-8 text-center position-relative">
+					<div class="imgbg fancy-border-radius mx-auto overflow-hidden">
+						<img class="img-fluid p-4 pb-0" src="resources/images/dipjoy.png">
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="brand brand-bg-custom py-3" id="brand">
+		<div class="container">
+			<div class="row align-items-center justify-content-between">
+				<div class="col-2">
+					<img class="img-fluid" src="./resources/images/artgallary management.png">
+				</div>
+				<div class="col-2">
+					<img class="img-fluid" src="./resources/images/content writers freelanceing system.png">
+				</div>
+				<div class="col-2">
+					<img class="img-fluid" src="./resources/images/egocary.png">
+				</div>
+				<div class="col-2">
+					<img class="img-fluid" src="./resources/images/madichine shop live project.svg">
+				</div>
+				<div class="col-2">
+					<img class="img-fluid" src="./resources/images/online idea dropper.png">
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="about about-bg-custom py-5" id="about">
+		<div class="container py-5">
+			<div class="row justify-conte-md-between justify-content-around">
+				<div class="col-lg-4 col-md-8 pb-lg-0 pb-5">
+					<div class="position-relative" style="height: 100%;">
+						<img class="img-fluid position-absolute" src="./resources/images/effect-1.svg" style="bottom:0%; left: -20%;">
+						<div class="about-profile-img text-center pt-4 mx-auto" style="background-color: rgba(255,255,255,0.10);border-radius: 30px; backdrop-filter:blur(4px); border:0.5px solid  rgba(255,255,255,0.50);">
+							<img class="img-fluid" src="./resources/images/dipjoy2.png">
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-7 col-md-12">
+					<div class="position-relative">
+						<img class="img-fluid position-absolute about-effect2" src="./resources/images/effect-2.svg" style="top:0%; right: -20%;">
+						<div class="about-text">
+							<p class="text-light text-center py-1" style=" width:110px; letter-spacing: 3px; background-color:#063560;border-radius: 5px;">ABOUT ME</p>
+							<h1 class="text-light font-weight-bold" style="font-size: clamp(1rem, 7vw, 3rem);">I AM AVAILABLE FOR <span style="color:#0788FF;">UI UX DESIGN & WEB APPLICATION</span> PROJECTS</h1>
+							<p class="text-light py-2" style="font-size: 23px;">I'm always excited to learn new technologies and adapt to the latest trends in web development. Whether working on front-end interfaces or back-end functionalities, my goal is to create seamless and engaging web applications that meet client and user needs.<br>When I’m not coding, I’m likely exploring the latest innovations in tech, collaborating on open-source projects, or sharing insights with fellow developers in the community.</p>
+							<div class="about-count d-flex py-3">
+							 	<div class="count-item text-center mr-2">
+									<h1 class="text-light m-0 pt-2" style="font-size: 30px;">30+</h1>
+									<p class="text-light m-0 " style="font-size: 15px;">Google <br> Review</p>
+								</div>
+								<div class="count-item text-center mr-2" style="width: 130px;">
+									<h1 class="text-light m-0 pt-2" style="font-size: 30px;">25+</h1>
+									<p class="text-light m-0 " style="font-size: 15px;">Real Project <br>Experience</p>
+								</div>
+								<div class="count-item text-center">
+									<h1 class="text-light m-0 pt-2" style="font-size: 30px;">5+</h1>
+									<p class="text-light m-0 " style="font-size: 15px;">Awward <br> Winning</p>
+								</div>
+							</div>
+							<div class="talkBtn pt-4">
+							  	<a href="#" class="btn header-icon-bg-custom rounded-pill text-light py-3 px-5" role="button">GET IN TOUCH</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="project project-bg-custom py-5" id="project">
+		<div class="container">
+			<div class="row">
+				<div class="col-12">
+					<p class="text-light text-center py-1" style=" width:110px; letter-spacing: 3px; background-color:#063560;border-radius: 5px;">MY WORK</p>
+					<h1 class="text-light font-weight-bold" style="font-size: 50px;">RECENT PROJECTS</h1>
+				</div>
+			</div>
+			<div class="row py-4 justify-content-around">
+				<div class="col-lg-4 col-md-6 col-12 mb-lg-0 mb-4">
+					<div class="card">
+							<a class="m-3 overflow-hidden position-relative rounded" href="https://e-grocery.drmcoders.com/index.php" target="_blank">
+								<img class="project-img img-fluid" style="border-radius: 5px;" src="./resources/images/egocary panel.png">
+								<div class="position-absolute card-overlays text-light justify-content-around align-items-center" style="display:none; background-color: rgba(0,0,0,0.5); left: 0; top: 0; right: 0; bottom: 0; font-size: 50px;">
+									<i class="bi bi-plus-circle"></i>
+								</div>
+							</a>
+						 <div class="card-body ml-3 p-0">
+						 	<div class="row .justify-content-sm-between justify-content-around">
+						 		<div class="col-sm-9 col-12 text-sm-left text-center">
+						 			<h4 class="font-weight-bold m-0">E-commerce</h4>
+						 	        <p class="p-0" style="color:gray;">Web Design,App Design</p>
+						 		</div>
+						 		<div class="col-sm-3 col-3">
+						 			<div class="project-icons">
+								        <a href="https://e-grocery.drmcoders.com/index.php" target="_blank" class="h3 card-icon">
+								        	<i class="bi bi-arrow-right text-light"></i></a>
+									</div>
+						 		</div>
+						 	</div>
+					     </div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6 col-12 mb-lg-0 mb-4">
+					<div class="card">
+							<a class="m-3 overflow-hidden position-relative rounded" href="https://oid.drmcoders.com/index.php" target="_blank">
+								<img class="project-img img-fluid" style="border-radius: 5px;" src="./resources/images/online idea dropper panel.png">
+								<div class="position-absolute card-overlays text-light justify-content-around align-items-center" style="display:none; background-color: rgba(0,0,0,0.5); left: 0; top: 0; right: 0; bottom: 0; font-size: 50px;">
+									<i class="bi bi-plus-circle"></i>
+								</div>
+							</a>
+						 <div class="card-body ml-3 p-0">
+							<div class="row .justify-content-sm-between justify-content-around">
+								<div class="col-sm-9 col-12 text-sm-left text-center">
+						 			<h4 class="font-weight-bold m-0">Service </h4>
+						 	        <p class="p-0" style="color:gray;">Fontend design and backend development</p>
+						 		</div>
+						 		<div class="col-sm-3 col-3">
+						 			<div class="project-icons">
+								        <a href="https://oid.drmcoders.com/index.php" target="_blank" class="h3 card-icon">
+								        	<i class="bi bi-arrow-right text-light"></i></a>
+									</div>
+						 		</div>
+						 	</div>
+					     </div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6 col-12 mb-lg-0 mb-4">
+					<div class="card">
+							<a class="m-3 overflow-hidden position-relative rounded" href="https://bongo-content-writers.drmcoders.com/index.php" target="_blank">
+								<img class="project-img img-fluid" style="border-radius: 5px;" src="./resources/images/content writers freelanceing system panel.png">
+								<div class="position-absolute card-overlays text-light justify-content-around align-items-center" style="display:none; background-color: rgba(0,0,0,0.5); left: 0; top: 0; right: 0; bottom: 0; font-size: 50px;">
+									<i class="bi bi-plus-circle"></i>
+								</div>
+							</a>
+						 <div class="card-body ml-3 p-0">
+							<div class="row .justify-content-sm-between justify-content-around">
+								<div class="col-sm-9 col-12 text-sm-left text-center">
+						 			<h4 class="font-weight-bold m-0">CMS Develop</h4>
+						 	        <p class="p-0" style="color:gray;">Fontend design and backend development</p>
+						 		</div>
+						 		<div class="col-sm-3 col-3">
+						 			<div class="project-icons">
+								        <a href="https://bongo-content-writers.drmcoders.com/index.php" target="_blank" class="h3 card-icon">
+								        	<i class="bi bi-arrow-right text-light"></i></a>
+									</div>
+						 		</div>
+						 	</div>
+					     </div>
+					</div>
+				</div>
+			</div>
+			<div class="dots d-flex justify-content-around align-items-center  text-center" style="width: 4%; margin:0 auto;" >
+				<div class="dot mr-2" style="width: 15px;height: 15px; background-color:#0788FF;border:1px solid white;border-radius: 50%;"></div>
+				<!-- <div class="dot" style="width: 15px;height: 15px; background-color:transparent;border:1px solid white;border-radius: 50%;"></div> -->
+			</div>
+		</div>
+	</section>
+	<section class="services service-bg-custom py-5" id="services">
+		<div class="container">
+			<div class="row">
+				<div class="col-12">
+					<p class="text-light text-center py-1" style=" width:110px; letter-spacing: 3px; background-color:#063560;border-radius: 5px;">SERVICES</p>
+					<h1 class="text-light font-weight-bold" style="font-size: 50px;">DESIGN <span style="color:#0788FF;"> SERVICES </span> I AM PROVIDING</h1>
+				</div>
+			</div>
+			<div class="row py-4 justify-content-around">
+				<div class="col-lg-3 col-md-4 col-12 mb-lg-0 mb-4">
+					<div class="card border-0 overflow-hidden rounded-lg">
+						<div class="card-img position-relative" style="height: 400px;">
+							<img class="img-fluid" src="./resources/images/service-01.jpg">
+							<div class="overlay position-absolute">
+								<div class="position-absolute p-3" style="left:0;right:0;bottom:0;">
+									<div class="btn btn-primary">
+										<i class="bi bi-brush-fill text-light h4"></i>
+									</div>
+									<h3 class="text-light pt-2">Website Design</h3>
+									<p style="color:lightgray;">Web design focuses on the visual and aesthetic aspects of a website. It involves creating layouts, choosing color schemes, typography, and arranging content to provide a visually appealing and user-friendly experience</p>
+									<hr class=" border-secondary">
+									<div class="ratings text-warning" style="font-size: 20px;">
+										<i class="bi bi-star-fill mr-1"></i>
+										<i class="bi bi-star-fill mr-1"></i>
+										<i class="bi bi-star-fill mr-1"></i>
+										<i class="bi bi-star-fill mr-1"></i>
+										<!-- <i class="bi bi-star-half"></i> -->
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-4 col-12 mb-lg-0 mb-4">
+					<div class="card border-0 overflow-hidden rounded-lg">
+						<div class="card-img position-relative" style="height: 400px;">
+							<img class="img-fluid" src="./resources/images/service-02.jpg" style="height: 100%;">
+							<div class="overlay position-absolute">
+								<div class="position-absolute p-3" style="left:0;right:0;bottom:0;">
+									<div class="btn btn-primary">
+										<i class="bi bi-code-square text-light h4"></i>
+									</div>
+									<h3 class="text-light pt-2">Web Development</h3>
+									<p style="color:lightgray;">Web development is the process of building and maintaining websites. Web developers ensure that a website functions smoothly and is optimized for speed, performance, and scalability.</p>
+									<hr class=" border-secondary">
+									<div class="ratings text-warning" style="font-size: 20px;">
+										<i class="bi bi-star-fill mr-1"></i>
+										<i class="bi bi-star-fill mr-1"></i>
+										<i class="bi bi-star-fill mr-1"></i>
+										<i class="bi bi-star-fill mr-1"></i>
+										<i class="bi bi-star-half"></i>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-4 col-12 mb-lg-0 mb-4">
+					<div class="card border-0 overflow-hidden rounded-lg">
+						<div class="card-img position-relative" style="height: 400px;">
+							<img class="img-fluid" src="./resources/images/service-03.jpg" style="height: 100%;">
+							<div class="overlay position-absolute">
+								<div class="position-absolute p-3" style="left:0;right:0;bottom:0;">
+									<div class="btn btn-primary">
+										<i class="bi bi-speedometer2 text-light h4"></i>
+									</div>
+									<h3 class="text-light pt-2">SEO Marketing</h3>
+									<p style="color:lightgray;">SEO is the practice of enhancing a website’s visibility on search engines like Google. By optimizing content, keywords, and site structure, SEO helps websites rank higher in search engine results, attracting more visitors..</p>
+									<hr class=" border-secondary">
+									<div class="ratings text-warning" style="font-size: 20px;">
+										<i class="bi bi-star-fill mr-1"></i>
+										<i class="bi bi-star-fill mr-1"></i>
+										<i class="bi bi-star-fill mr-1"></i>
+										<i class="bi bi-star-fill mr-1"></i>
+										<!-- <i class="bi bi-star-half"></i> -->
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-4 col-12 mb-lg-0 mb-4">
+					<div class="card border-0 overflow-hidden rounded-lg">
+						<div class="card-img position-relative" style="height: 400px;">
+							<img class="img-fluid" src="./resources/images/service-04.jpg" style="height: 100%;">
+							<div class="overlay position-absolute">
+								<div class="position-absolute p-3" style="left:0;right:0;bottom:0;">
+									<div class="btn btn-primary">
+										<i class="bi bi-palette text-light h4"></i>
+									</div>
+									<h3 class="text-light pt-2">Graphics Design</h3>
+									<p style="color:lightgray;">Graphic design is the art of combining images, text, and colors to convey messages visually. Graphic designers create visuals for branding, marketing, and advertising across various media, including print, digital, and social platforms.</p>
+									<hr class=" border-secondary">
+									<div class="ratings text-warning" style="font-size: 20px;">
+										<i class="bi bi-star-fill mr-1"></i>
+										<i class="bi bi-star-fill mr-1"></i>
+										<!-- <i class="bi bi-star-fill mr-1"></i> -->
+										<!-- <i class="bi bi-star-fill mr-1"></i> -->
+										<i class="bi bi-star-half"></i>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="Experience Experience-bg-custom py-5" id="Experience">
+		<div class="container py-5">
+			<div class="row mb-5">
+				<div class="col-12">
+					<p class="text-light text-center py-1" style=" width:130px; letter-spacing: 3px; background-color:#063560;border-radius: 5px;">EXPERIENCE</p>
+					<h1 class="text-light font-weight-bold" style="font-size: 50px;">MY WORK <span style="color:#0788FF;"> EXPERIENCE</span></h1>
+				</div>
+			</div>
+			<div class="row Experience-row-bg-custom mb-3 p-4 py-4">
+				<div class="col-lg-3 col-md-4 col-12 mb-md-0 mb-3 pl-0">
+					<div class="card bg-transparent">
+						<div class="card-body text-light pt-3 pb-4" style="background-color: #0788FF; border-radius: 8px;">
+							<h2>IT and Payroll</h2>
+							<p style="color:lightgray;margin-bottom: 0">Gartex Garments LTD | Office</p>
+							<p style="font-size: 19px;">FEB 2023 - PRESENT</p>
+							<small class="bg-white text-dark mt-4 rounded-pill py-2 px-4 font-weight-bold">Full-time</small>
+						</div>	
+					</div>
+				</div>
+				<div class="col-lg-9 col-md-8 col-12 text-light">
+					<h1>About Company</h1>
+					<p class="text-justify" style="font-size: 19px; color:lightgray;">Gartex Garments LTD is a leading garment manufacturing company known for its commitment to quality and innovation. With a focus on sustainable practices and cutting-edge technology, Gartex Garments LTD delivers high-quality apparel to clients worldwide, ensuring customer satisfaction and industry excellence.</p>
+					<a href="https://www.bgmea.com.bd/member/1455" class="btn btn-primary mt-1" target="_blank">Visit Website</a>
+				</div>
+			</div>
+			<div class="row Experience-row-bg-custom mb-3 p-4 py-4">
+				<div class="col-lg-3 col-md-4 col-12 mb-md-0 mb-3 pl-0">
+					<div class="card bg-transparent">
+						<div class="card-body text-light pt-3 pb-4" style="background-color: #0788FF; border-radius: 8px;">
+							<h2>Full-stack Developer</h2>
+							<p style="color:lightgray;margin-bottom: 0">Bongo Content Writter | REMOTE</p>
+							<p style="font-size: 19px;">JAN 2022 - FEB 2023</p>
+							<small class="bg-white text-dark mt-4 rounded-pill py-2 px-4 font-weight-bold">Part-time</small>
+						</div>	
+					</div>
+				</div>
+				<div class="col-lg-9 col-md-8 col-12 text-light">
+					<h1>About Company</h1>
+					<p class="text-justify" style="font-size: 19px; color:lightgray;">Bongo Content Writer is a digital platform dedicated to connecting talented freelance writers with businesses and individuals seeking high-quality content. Specializing in a wide range of content types—including blog posts, articles, web copy, and social media content—Bongo Content Writer offers a seamless experience for freelancers and clients alike.</p>
+					<a href="https://bongo-content-writers.drmcoders.com/index.php" class="btn btn-primary mt-1" target="_blank">Visit Website</a>
+				</div>
+			</div>
+			<div class="row Experience-row-bg-custom mb-3 p-4 py-4">
+				<div class="col-lg-3 col-md-4 col-12 mb-md-0 mb-3 pl-0">
+					<div class="card bg-transparent">
+						<div class="card-body text-light pt-3 pb-4" style="background-color: #0788FF; border-radius: 8px;">
+							<h2>Backend Developer</h2>
+							<p style="color:lightgray;margin-bottom: 0">E-Grocary | REMOTE</p>
+							<p style="font-size: 19px;">JAN 2021 - PRESENT</p>
+							<small class="bg-white text-dark mt-4 rounded-pill py-2 px-4 font-weight-bold">Part-time</small>
+						</div>	
+					</div>
+				</div>
+				<div class="col-lg-9 col-md-8 col-12 text-light">
+					<h1>About Company</h1>
+					<p class="text-justify" style="font-size: 19px; color:lightgray;">Egrocary is a dynamic e-commerce platform dedicated to providing a seamless online shopping experience. Our mission is to connect customers with a wide range of high-quality products across various categories, from everyday essentials to specialty items. We focus on delivering convenience, reliability, and competitive pricing, all from the comfort of your home.</p>
+					<a href="https://e-grocery.drmcoders.com/index.php" class="btn btn-primary mt-1" target="_blank">Visit Website</a>
+				</div>
+			</div>
+			<div class="row Experience-row-bg-custom  p-4 py-4">
+				<div class="col-lg-3 col-md-4 col-12 mb-md-0 mb-3 pl-0">
+					<div class="card bg-transparent">
+						<div class="card-body text-light pt-3 pb-4" style="background-color: #0788FF; border-radius: 8px;">
+							<h2>CMS Developer</h2>
+							<p style="color:lightgray;margin-bottom: 0">OID (Online Idea Drop) | REMOTE</p>
+							<p style="font-size: 19px;">JAN 2021 - 2022</p>
+							<small class="bg-white text-dark mt-4 rounded-pill py-2 px-4 font-weight-bold">FULL TIME</small>
+						</div>	
+					</div>
+				</div>
+				<div class="col-lg-9 col-md-8 col-12 text-light">
+					<h1>About Company</h1>
+					<p class="text-justify" style="font-size: 19px; color:lightgray;">OID (Online Idea Drop) is a digital platform designed for sharing, exploring, and developing creative ideas. Whether you're an innovator, entrepreneur, or simply someone with a passion for fresh concepts, OID offers a space where users can easily post and share their ideas, receive feedback, and collaborate with others in a supportive online community.</p>
+					<a href="https://oid.drmcoders.com/index.php" class="btn btn-primary mt-1" target="_blank">Visit Website</a>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="testimonial testimonial-bg-custom position-relative py-5" id="testimonial">
+		<img class="position-absolute" src="./resources/images/effect-4.svg" style="right:0;">
+		<div class="container position-relative py-5">
+			<img class="img-fluid position-absolute" src="./resources/images/effect-3.svg" style="left:15%;">
+			<div class="row">
+				<div class="col-12 text-center">
+					<p class="text-light text-center py-1 text-light" style=" width:140px; letter-spacing: 3px; background-color:#063560;border-radius: 5px;">TESTIMONIAL</p>
+					<h1 class="text-light font-weight-bold mb-5" style="font-size: 50px;">OVER<span style="color:#0788FF;"> 150+</span> <br> PEOPLE TRUST ME</h1>
+									
+				</div>
+			</div>
+			<div class="owl-carousel owl-theme owl-loaded">
+				<div class="owl-stage-outer">
+					<div class="owl-stage">
+						<div class="owl-item">
+							<div class="row position-relative" style="z-index: 1">
+								<div class=" col-12 testimonial-info text-center d-flex flex-column align-items-center">
+									<img class=" rounded-circle " src="./resources/images/hassan.png" style="width: 150px; border:8px solid #36495A;">
+									<p class="text-light w-75 py-4" style="font-size: 22px;">Dipjoy sarker consistently delivered high-quality work and demonstrated strong technical expertise throughout the my project. He communicated well with the team and addressed challenges effectively. Delivered high-quality results ahead of deadlines and effectively collaborated with the team. Looking forward to working with him again.</p>
+									<h4 class="text-light">MD. Abdul Hassan</h4>
+									<span style="color:lightgray;" >Project Owner</span>
+								</div>
+							</div>
+						</div>
+						<div class="owl-item">
+							<div class="row position-relative" style="z-index: 1">
+								<div class=" col-12 testimonial-info text-center d-flex flex-column align-items-center">
+									<img class=" rounded-circle " src="./resources/images/mehedi.jpg" style="width: 150px; border:8px solid #36495A;">
+									<p class="text-light w-75 py-4" style="font-size: 22px;">Joining with Dipjo Sorker has changed our online presence. After showcasing our vision, he took great interest in finishing our work with care.Every element, every line of code, was designed with intention. Dipjoy Sorker's skill in appealing design with effective, high-performing features has resulted in a website that is both eye-catching and user-friendly. Therir professional work and clear guidance led gave us option we didn't consider before. I would recomend Dipjoy for professional work.</p>
+									<h4 class="text-light">Mehedi Hasan</h4>
+									<span style="color:lightgray;" >DRM-Coders</span>
+								</div>
+							</div>
+						</div>
+						<div class="owl-item">
+							<div class="row position-relative" style="z-index: 1">
+								<div class=" col-12 testimonial-info text-center d-flex flex-column align-items-center">
+									<img class=" rounded-circle " src="./resources/images/koli.png" style="width: 150px; border:8px solid #36495A;">
+									<p class="text-light w-75 py-4" style="font-size: 22px;">A highly effective trainer who has worked at a range of levels for over 9 years and has helped hundreds of people throughout their careers. Dipjoy sarker is excited about those who have dedicated most of their professional lives to helping young people. He understands the value of learners and is an expeert in supporting them to pivot into other sectors.He loves hearing about what learners do and is excited about helping every learners that he speaks to reach their fullest career potential.</p>
+									<h4 class="text-light">Rashida Akther</h4>
+									<span style="color:lightgray;" >DRM-Coders</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<footer class="footer footer-bg-custom" id="footer">
+		<div class="container py-5 mb-5" style="border-radius: 10px; background-image: linear-gradient(to bottom,#052A4A 30%, #05355D 0);">
+			<div class="row justify-content-around">
+				<div class="col-lg-4 col-md-6 col-12 pt-4 text-md-left text-center">
+					<p class="pt-md-5 pt-0 mb-0" style="color:lightgray;">WRITE AN E-MAIL</p>
+					<h4 class="text-light">dipjoysarker.official@gmail.com</h4>
+
+					<p class="mt-4 mb-0" style="color:lightgray;">WRITE AN E-MAIL</p>
+					<h4 class="text-light">+8801876943753</h4>
+
+					<div class="px-0 d-flex justify-content-around mt-5 mx-sm-auto w-75 ml-lg-3">
+						<div class="home-icons text-center rounded-circle" style="background-color: #1877F2;">
+							<a href="#"><i class="bi bi-facebook text-light"></i></a>
+						</div>
+						<div class="home-icons text-center rounded-circle" style="background-color: #F26798;">
+							<a href="#"><i class="bi bi-globe2 text-light"></i></a>
+						</div>
+						<div class="home-icons text-center rounded-circle" style="background-color: #1275B1;">
+							<a href="#"><i class="bi bi-linkedin text-light"></i></a>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-7 col-md-6 col-12 mt-md-0 mt-5 text-light">
+					<h1 class="text-md-left text-center" style="font-size: 45px;">Let’s Discuss Your Project</h1>
+					<p class="text-md-left text-center" style="font-size: 22px; color:lightgray;">Always available for freelancing if the right project comes along,<br> Feel free to contact me.</p>
+
+					<?php
+					if (isset($_POST['send'])) {
+						$name = htmlspecialchars($_POST['name']);
+						$email = htmlspecialchars($_POST['email']);
+						$subject = htmlspecialchars($_POST['subject']);
+						$message = htmlspecialchars($_POST['message']);
+
+						$mail = new PHPMailer(true);
+
+						try {
+							// Server settings
+							$mail->isSMTP();
+							$mail->Host       = 'smtp.gmail.com'; // Gmail SMTP server
+							$mail->SMTPAuth   = true;
+							$mail->Username   = 'blackfighter6642@gmail.com'; // your Gmail address
+							$mail->Password   = 'qpvadpqzrdqzcixy';  // Gmail App Password
+							$mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
+							$mail->Port       = 465;
+
+							// Recipients
+							$mail->setFrom($email, $name);  // from the user
+							$mail->addAddress('blackfighter6642@gmail.com', 'Portfolio'); // to your Gmail
+
+							$mail->addReplyTo($email, $name);
+
+							// Content
+							$mail->isHTML(true);
+							$mail->Subject = $subject;
+							// $mail->Body    = "<h3>Message from Portfolio Contact Form</h3>
+							// 				<p><b>Name:</b> {$name}</p>
+							// 				<p><b>Email:</b> {$email}</p>
+							// 				<p><b>Message:</b><br>{$message}</p>";
+
+							$mail->Body	= '
+									<!DOCTYPE html>
+									<html lang="en">
+									<head>
+										<meta charset="UTF-8">
+										<meta name="viewport" content="width=device-width, initial-scale=1.0">
+										
+										<style>
+											.mail-tmp {
+												font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+												background-color: #f8f9fa; margin: 0 auto; padding: 40px 15px; display: flex; justify-content: center; align-items: flex-start;
+											}
+											.mail-tmp .email-container {
+												max-width: 600px; width: 100%; margin: 0 auto;
+											}
+											.mail-tmp .logo-area {
+												text-align: center; margin-bottom: 20px;
+											}
+											.mail-tmp .app-logo {
+												width: 200px; display: block; margin: 0 auto;
+											}
+											.mail-tmp .simple-card {
+												background-color: #ffffff; border-radius: 5px; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); overflow: hidden; 
+											}
+											.mail-tmp .card-content {
+												padding: 40px;
+											}
+											.mail-tmp h3.card-title {
+												font-size: 1.5rem; font-weight: bold; margin-bottom: 5px; color: #343a40; text-transform: capitalize;
+											}
+											.mail-tmp h5.card-title {
+												font-weight: bold; margin-bottom: 15px; color: #4c4e50ff;
+											}
+											.mail-tmp .card-text {
+												font-size: 1rem; line-height: 1.6; margin-bottom: 25px; color: #6c757d;
+											}
+											.mail-tmp .button {
+												display: inline-block; padding: 10px 20px; background-color: #007bff; color: white; text-decoration: none; border-radius: 4px; font-weight: bold; transition: background-color 0.3s;
+											}
+											.mail-tmp .button:hover {
+												background-color: #0056b3;
+											}
+											.mail-tmp .footer {
+												text-align: center; margin-top: 40px; color: #6c757d;
+											}
+											.mail-tmp .footer-title {
+												font-size: 2rem; margin-bottom: 10px; color: #343a40; font-weight: normal;
+											}
+											.mail-tmp .footer-line {
+												margin: 0;line-height: 1.5;
+												font-size: 0.9rem;
+											}
+
+											@media (max-width: 576px) {
+												.mail-tmp .card-content {
+													padding: 20px;
+												}
+												.mail-tmp{
+													padding: 20px 10px;
+												}
+												.mail-tmp .footer-title {
+													font-size: 1.5rem;
+												}
+											}
+										</style>
+									</head>
+									<body class="mail-tmp">
+										<div class="email-container">
+											<div class="logo-area">
+												<img src="https://drmcoders.com/resource/images/site%20logo/drm-logo.png" alt="drmcoders Logo" class="app-logo">
+											</div>
+											<div class="simple-card">
+												<div class="card-content">
+
+													<center><h2 style="color:#343a40;">Message from Portfolio Contact Form</h2></center><br>
+
+													<h3 class="card-title">'.$name.'</h3>
+													<h5 class="card-title">'.$email.'</h5>
+													<p class="card-text">'.$message.'</p>
+													<a href="https://dipjoy.drmcoders.com" class="button" target="_blank">Visit Website</a>
+												</div>
+											</div>
+											<div class="footer">
+												<h2 class="footer-title">drmcoders</h2>
+												<p class="footer-line">Sent with &lt;3 from drmcoders.</p>
+												<p class="footer-line">drmcoders. 1 drmcoders Street</p>
+												<p class="footer-line">Gnarly State, 01234 USA</p>
+											</div>
+
+										</div>
+
+									</body>
+									</html>';
+
+							if($mail->send()){
+								echo '<div class="alert alert-warning alert-dismissible fade show" role="alert">
+										<strong>Message has been sent successfully!</strong>.
+										<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+											<span aria-hidden="true">&times;</span>
+										</button>
+									</div>';
+							};
+						} catch (Exception $e) {
+							echo '<div class="alert alert-warning alert-dismissible fade show" role="alert">
+										<strong>Message could not be sent. Mailer Error: '.$mail->ErrorInfo.'</strong>.
+										<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+											<span aria-hidden="true">&times;</span>
+										</button>
+									</div>';
+						}
+					}
+					?>
+
+					<form method="POST">
+						<div class="row pt-4">
+						    <div class="col py-4">
+						      <label for="inputEmail4" style="color:white; font-size: 15px;">NAME</label>
+						      <input type="text" name="name" class="form-control" placeholder="Full name*" style="background-color: transparent; color:white;">
+						    </div>
+						    <div class="col py-4">
+						    	<label for="inputEmail4" style="color:white; font-size: 15px;">EMAIL</label>
+						        <input type="text" name="email" class="form-control" placeholder="Email*" style="background-color: transparent; color:white;">
+						    </div>
+						</div>
+						<div class="row">
+						  	<div class="col pb-4">
+						      <label for="inputEmail4" style="color:white; font-size: 15px;">SUBJECT</label>
+						      <input type="text" name="subject" class="form-control" placeholder="Subject*" style="background-color: transparent; color:white;">
+						    </div>
+						</div>
+						<div class="row">
+						  	<div class="col-12">
+	                       		 <label for="exampleFormControlTextarea1" style="color:white; font-size: 15px;">MEASSAGE</label>
+	                        	 <textarea name="message" class="form-control" rows="4" style="background-color: transparent; color:white;"></textarea>
+	                        </div>
+						</div>
+						<div class="row">
+							<div class="col-12">
+								<button class="btn btn-primary w-100 py-3 rounded-pill border-light mt-4 text-uppercase" type="submit" name="send">SEND</button>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<div class="container-fluid border-top border-secondary" style="margin-top: 80px;">
+			<div class="container">
+				<div class="row">
+					<div class="col-12 py-3 text-muted text-center">
+						<p>Designed by the family members of DRM-coders @2025</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" ></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+	<script src="./resources/owlcarousel/owl.carousel.min.js"></script>
+	<script>
+		$('#testimonial .owl-carousel').owlCarousel({
+			loop:true,
+			margin:10,
+			lazyLoad: true,
+			autoplay: true,
+			responsiveClass:true,
+			responsive:{
+				0:{
+					items:1,
+					nav:true
+				}
+			}
+		});
+		$('.owl-carousel').on('mousewheel', '.owl-stage', function (e) {
+			if (e.deltaY>0) {
+				$('.owl-carousel').trigger('next.owl');
+			} else {
+				$('.owl-carousel').trigger('prev.owl');
+			}
+			e.preventDefault();
+		});
+		$('.owl-dot').click(function () {
+			$('.owl-carousel').trigger('to.owl.carousel', [$(this).index(), 300]);
+		});
+	</script>
+</body>
+</html>
